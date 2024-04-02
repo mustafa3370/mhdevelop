@@ -42,7 +42,7 @@ function Header() {
         </ul>
       </nav>
       {/* lightmode */}
-      <label class="ui-switch">
+      <label className="ui-switch">
         <input type="checkbox" />
         <div class="slider">
           <div class="circle"></div>
