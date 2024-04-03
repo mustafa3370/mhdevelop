@@ -23,6 +23,13 @@ html {box-sizing: border-box;}
   --blue:rgb(93,188,252);
   --iconhover:rgb(93,188,252);
 }
+.light{
+  --primary:rgba(243, 240, 240, 0.904);
+  --title:black;
+  --subtitle:#000000bb;
+  --secondary:#fff;
+  --bgHeader:rgb(253 , 253, 253);
+}
 body{
   background-color: var(--primary);
   color: #fff;

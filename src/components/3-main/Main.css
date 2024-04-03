@@ -155,11 +155,11 @@ main section.right-section.flex {
 }
 .card .icon-link {
   font-size: 1.2rem;
-  color: white;
+  color: var(--subtitle);
 }
 .card .icon-gitHub {
   font-size: 1.2rem;
-  color: white;
+  color: var(--subtitle);
 }
 .card .icon-link:hover {
   font-size: 1.2rem;

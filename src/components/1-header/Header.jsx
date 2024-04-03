@@ -1,7 +1,21 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Header.css";
 function Header() {
   const [showModel, setshowModel] = useState(false);
+  const [theme, settheme] = useState(localStorage.getItem("currentMode") ?? "dark");
+  // use effect to theme
+  useEffect(() => {
+    
+    if (theme === "light") {
+      document.body.classList.remove("dark");
+      document.body.classList.add("light");
+
+    }else{
+      document.body.classList.add("dark");
+      document.body.classList.remove("light");
+    }
+  
+  }, [theme]);
   return (
     <header className="flex">
       {/* hamburger */}
@@ -43,7 +57,13 @@ function Header() {
       </nav>
       {/* lightmode */}
       <label className="ui-switch">
-        <input type="checkbox" />
+        <input type="checkbox"onClick={() => {
+          // send value to ls
+          localStorage.setItem("currentMode" , theme === "dark" ? "light":"dark")
+          //get value from ls 
+          settheme(localStorage.getItem("currentMode"))
+        }
+        } />
         <div class="slider">
           <div class="circle"></div>
         </div>

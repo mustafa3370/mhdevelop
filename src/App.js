@@ -7,24 +7,21 @@ import { useEffect, useState } from "react";
 // Empty dependency array means this effect runs once after the initial render
 
 function App() {
- 
- useEffect(() => {
-   window.addEventListener("scroll", () => {
-     if (window.scrollY > 300) {
-     
-       setshowscroll(true);
-     } else {
-       setshowscroll(false);
-     }
-   });
- }, []);
-  
-   const [showscroll, setshowscroll] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        setshowscroll(true);
+      } else {
+        setshowscroll(false);
+      }
+    });
+  }, []);
+
+  const [showscroll, setshowscroll] = useState(false);
   return (
     <div className="container">
       <Header />
       <div className="divider" />
-
       <Hero />
       <div className="divider" />
       <Main />
@@ -32,9 +29,8 @@ function App() {
       <Contact />
       <div className="divider" />
       <Footer />
-
       <a
-        style={{ opacity: showscroll? 1:0}}
+        style={{ opacity: showscroll ? 1 : 0 }}
         id="scroll-up"
         class="scroll-up"
         href="#"
