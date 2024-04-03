@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import { useForm, ValidationError } from "@formspree/react";
 import "./Contact.css";
 
@@ -55,7 +55,7 @@ function Contact() {
 )}
         </form>
         {state.succeeded && ("")}
-        <div className=" animation">animation</div>
+        
       </div>
     </section>
   );

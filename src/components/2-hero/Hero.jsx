@@ -1,16 +1,25 @@
 import React from "react";
+import { motion } from "framer-motion"
 import "./Hero.css";
 function Hero() {
   return (
     <section className="hero flex">
       <div className="left-section ">
-        <div className="parent-avatar">
+        
+        <motion.div className="parent-avatar"
+        initial={{transform:"scale(0)"}}
+        animate={{transform:"scale(1)"}}
+        transition={{duration:4,type:"spring",stiffness:10}}
+
+        
+        
+        >
           <img
             src={require("../../photos/logopng.png")}
             className="avatar"
             alt=""
           />
-        </div>
+        </motion.div>
               <h1 className="title">Software Development,
                   WebSite Development</h1>
         <p className="subtitle">
@@ -28,7 +37,7 @@ function Hero() {
               </div>
       </div>
 
-      <div className="right-section animation ">animation</div>
+      
     </section>
   );
 }
